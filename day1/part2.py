@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 with open('input', 'r') as f:
     lines = f.readlines()
 first_list = list()
@@ -17,3 +20,6 @@ for i in range(len(first_list)):
     if second_list.get(first_list[i]):
         sum += int(first_list[i]) * second_list[first_list[i]]
 print(sum)
+
+execution_time = time.time() - start_time
+print("Execution time:", execution_time, "seconds")
